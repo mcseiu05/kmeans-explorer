@@ -1,7 +1,7 @@
 streamlit
 pandas
 numpy
-sklearn.preprocessing
-sklearn.cluster
-matplotlib.pyplot
-seaborn 
+scikit-learn
+matplotlib
+seaborn
+openpyxl
