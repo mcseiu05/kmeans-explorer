@@ -1,1 +1,7 @@
-
+streamlit
+pandas
+numpy
+sklearn.preprocessing
+sklearn.cluster
+matplotlib.pyplot
+seaborn 
