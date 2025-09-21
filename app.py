@@ -8,14 +8,13 @@ import seaborn as sns
 
 st.set_page_config(page_title="K-Means Clustering App", layout="wide")
 
-st.title("🔍 K-Means Explorer")
-
-# Sidebar controls
-st.sidebar.header("Clustering Options")
+st.title("📊 K-Means Clustering App")
 st.write("Upload your dataset (e.g., Vendor segmentation) and explore clusters.")
 
-# --- File Upload ---
-uploaded_file = st.file_uploader("Upload CSV or Excel file", type=["csv", "xlsx"])
+# --- Sidebar controls ---
+st.sidebar.header("⚙️ Controls")
+
+uploaded_file = st.sidebar.file_uploader("Upload CSV or Excel file", type=["csv", "xlsx"])
 
 if uploaded_file is not None:
     # Read dataset
@@ -27,9 +26,9 @@ if uploaded_file is not None:
     st.subheader("Preview of Dataset")
     st.dataframe(df.head())
 
-    # Select features
+    # Feature selection
     numeric_columns = df.select_dtypes(include=np.number).columns.tolist()
-    selected_features = st.multiselect("Select features for clustering", numeric_columns, default=numeric_columns)
+    selected_features = st.sidebar.multiselect("Select features for clustering", numeric_columns, default=numeric_columns)
 
     if selected_features:
         X = df[selected_features]
@@ -39,7 +38,7 @@ if uploaded_file is not None:
         X_scaled = scaler.fit_transform(X)
 
         # Select number of clusters
-        k = st.slider("Select number of clusters (K)", 2, 10, 3)
+        k = st.sidebar.slider("Select number of clusters (K)", 2, 10, 3)
 
         # Run K-Means
         kmeans = KMeans(n_clusters=k, random_state=42)
@@ -89,4 +88,3 @@ if uploaded_file is not None:
         st.subheader("Download Clustered Data")
         csv = df.to_csv(index=False).encode('utf-8')
         st.download_button("Download CSV", data=csv, file_name="clustered_data.csv", mime="text/csv")
-
