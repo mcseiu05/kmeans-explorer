@@ -8,7 +8,7 @@ import seaborn as sns
 
 st.set_page_config(page_title="K-Means Clustering App", layout="wide")
 
-st.title("📊 K-Means Clustering App")
+st.title("K-Means explorer")
 st.write("Upload your dataset (e.g., Vendor segmentation) and explore clusters.")
 
 # --- Sidebar controls ---
