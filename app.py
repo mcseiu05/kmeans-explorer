@@ -10,8 +10,6 @@ st.set_page_config(page_title="K-Means Clustering App", layout="wide")
 
 st.title("K-Means explorer")
 st.write("Upload your dataset (e.g., Vendor segmentation) and explore clusters.")
-
-# --- Sidebar controls ---
 st.sidebar.header("⚙️ Controls")
 
 uploaded_file = st.sidebar.file_uploader("Upload CSV or Excel file", type=["csv", "xlsx"])
