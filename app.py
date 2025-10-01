@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 st.set_page_config(page_title="K-Means Clustering App", layout="wide")
-
 st.title("K-Means explorer")
 st.write("Upload your dataset (e.g., Vendor segmentation) and explore clusters.")
 st.sidebar.header("⚙️ Controls")
