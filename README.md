@@ -6,10 +6,6 @@ This app allows users to upload their own dataset (e.g., vendor transaction reco
 
 ---
 
-## 🌐 Live Demo
-You can try the published app directly here:  
-👉 https://mcseiu05-kmeans-explorer.streamlit.app/
-
 ## ✨ Features
 - 📂 Upload vendor data (CSV/Excel)  
 - 🔎 Select numeric features for clustering  
@@ -30,6 +26,7 @@ cd kmeans-explorer
 pip install -r requirements.txt
 streamlit run app.py
 ```
+Or access the deployed app directly here: https://mcseiu05-kmeans-explorer.streamlit.app/
 
 ## 📌 Use Cases
 
